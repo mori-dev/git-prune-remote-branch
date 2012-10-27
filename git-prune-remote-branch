@@ -2,7 +2,7 @@
 require 'optparse'
 
 opts = OptionParser.new
-opts.on('--noop', 'dry-run mode') { |v| $noop = true }
+opts.on('-n', '--noop', 'dry-run mode') { |v| $noop = true }
 opts.parse!
 
 `git branch -r`.each_line do |branch|
